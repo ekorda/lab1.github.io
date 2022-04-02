@@ -1,0 +1,48 @@
+body {
+  background: #eee;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  color: #f8f9fa;
+  padding-left: 10px;
+  background: #343a40;
+}
+.display-select {
+  position: absolute;
+  height: 30px;
+  width: 150px;
+  right: 400px;
+  top: 25px;
+}
+form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.form-element {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.form-title {
+  margin: 30px 10px;
+}
+
+label {
+  width: 30%;
+}
+
+.div-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
