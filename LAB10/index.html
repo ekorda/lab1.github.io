@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+1-
+</br>
+Array.prototype.even = function () {
+</br>
+    return this.filter(n => n % 2 == 0);
+</br>
+   }
+</br>
+   Array.prototype.odd = function () {
+</br>
+    return this.filter(n => n % 2 !== 0);
+</br>
+   }
+</br>
+  console.log([1, 2, 3, 4, 5, 6, 7, 8].even());
+</br>
+  console.log([1, 2, 3, 4, 5, 6, 7, 8].odd());
+ </br>
+ </br>
+2-
+</br>
+setTimeout runs in the Timer phase, setImmediate runs in the check phase. For example: If there's a case that needs to run just before the close phase, we can use setImmediate.
+ </br>
+ </br>
+3- 
+</br>
+callback of process.nextTick gets executed multiple chances in one iteration - highest priority. setImmediate only gets executed once in one cycle. how many callbacks will be executed in one iteration? process.nextTick() - all of callbacks in nextTick queue, drain out - Don't use while true loop on process.nextTick, will block event loop. setImmediate - certain, the remaining for the next iteration/tick
+</br>
+</br>
+4-
+</br>
+No
+</p>
+
+</body>
+</html>
