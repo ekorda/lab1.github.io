@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMusic Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="../images/mylogo.png" class="logo" alt="logo" />
+      <div id="input-credentials-before-auth" class="input-credentials">
+        <label id="error-message"></label>
+        <label for="username">Username : </label>
+        <input type="text" id="username" />
+        <label for="password">Password : </label>
+        <input type="password" id="password" />
+        <button
+          type="submit"
+          class="login-button"
+          onclick="login()"
+          id="btn-submit"
+        >
+          Login
+        </button>
+        <button type="reset" onclick="reset()" class="reset-button">
+          Reset
+        </button>
+      </div>
+      <div id="input-credentials-after-auth" class="input-credentials">
+        <label for="username">Username : mehdi </label>
+        <label style="margin-left: 50px" for="song"> search: </label>
+        <input oninput="onSearch()" type="text" id="songKey" />
+        <button
+          type="submit"
+          class="login-button"
+          onclick="logout()"
+          id="btn-submit"
+        >
+          Logout
+        </button>
+      </div>
+    </header>
+    <main>
+      <article id="afterAuth">
+        <h1 style="margin-left: 15px ; margin-top: 20px">
+          Song you may interest
+        </h1>
+
+        <table id="songTable">
+          <tr>
+            <th style="width: 20% ">id</th>
+            <th style="width: 40% ">title</th>
+            <th style="width: 20% ">Relase Date</th>
+            <th style="width: 20% ">Actions</th>
+          </tr>
+        </table>
+
+        <h1 style=" margin-left: 15px ; margin-top: 20px">Your Playlist</h1>
+
+        <table id="playListTable">
+          <tr>
+            <th style="width: 20% ">id</th>
+            <th style="width: 40% ">title</th>
+            <th style="width: 40% ">Actions</th>
+          </tr>
+        </table>
+      </article>
+      <article id="beforeAuth">
+        <h1 style="margin-top: 15px">Welcome to our webSite :)</h1>
+      </article>
+    </main>
+  </body>
+  <div id="audioDiv">
+    <div id="musicTitle">My title</div>
+    <div onclick="playRandom()" class="random">
+      <img src="../images/random.png" class="randomLogo" alt="logo" />
+    </div>
+    <div onclick="hideSong()" class="exist">x</div>
+    <audio
+      id="audio"
+      style="position: absolute; top: 83% ; left: 40%;"
+      controls
+      type="audio/mp3"
+    ></audio>
+  </div>
+</html>
